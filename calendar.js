@@ -45,8 +45,8 @@
 		this.currentDate = date.getDate();
 		
 		// 配置项
-		this.step = opt.step; // 最多显示从本月开始的step个月
-		this.leastDays = opt.leastDays; // 最少选择天数
+		this.step = opt.step ? Math.abs(opt.step) : 5; // 最多显示从本月开始的step个月
+		this.leastDays = opt.leastDays ? Math.abs(opt.leastDays) : 0; // 最少选择天数
 		this.callback = opt.callback; // 回调函数
 		this.priceData = opt.priceData; // 价格数据集合
 		
