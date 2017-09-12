@@ -6,6 +6,11 @@ calendar.js是一款前端日历插件，使用原生JS开发，不依赖任何�
 
 ### 在线demo
 - [http://www.zymseo.com/demo/calendar](http://www.zymseo.com/demo/calendar)
+- 以上demo请在手机端或者PC浏览器的手机模式下浏览
+
+### 说明 
+- 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
+- 或者您可以 "follow" 一下，我会不断开源更多的有趣的项目
 
 ### 使用方法
 
