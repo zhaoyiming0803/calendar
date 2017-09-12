@@ -19,7 +19,7 @@ calendar.js是一款前端日历插件，使用原生JS开发，不依赖任何�
 var calendar = new Calendar({
 	step: step, // 最多显示从本月开始的step个月
 	leastDays: leastdays, // 最少选择天数
-	callback: fn, // 回调函数
+	callback: fn, // 回调函数，默认有两个数组参数，第一个是所选开始时间和结束时间，第二个是开始时间和结束时间对应的element索引
 	priceData: priceData // 价格数据数组集合，如果没有，则为null
 }).init();
 ```
