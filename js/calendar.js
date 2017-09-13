@@ -309,7 +309,7 @@
 					mark = Math.floor(calendarWraperScrollTop / 260),
 					monthBar = oDoc.querySelectorAll('.month-bar');
 
-				currentMonthBar.innerText = monthBar[mark].innerText;
+				monthBar[mark] && (currentMonthBar.innerText = monthBar[mark].innerText);
 				currentMonthBar = monthBar = timer = null;
 			}.bind(this), 100);
 		}
