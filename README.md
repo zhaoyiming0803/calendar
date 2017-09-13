@@ -27,14 +27,14 @@ var calendar = new Calendar({
 ### html
 
 ``` html
-<link rel="stylesheet" type="text/css" href="./calendar.css" />
-<script type="text/javascript" src="./calendar.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/calendar.css" />
+<script type="text/javascript" src="./js/calendar.js"></script>
 ```
 
 ### （1）使用script 标签引入:
 
 ``` javascript
-<script type="text/javascript" src="./calendar.js"></script>
+<script type="text/javascript" src="./js/calendar.js"></script>
 <script type="text/javascript">
 	var calendar = new Calendar({
 		step: step,
@@ -57,7 +57,7 @@ require(['Calendar'], function (Calendar) {
 ```
 ### （3）使用ES6方式导入：
 ``` javascript
-import Calendar from './calendar.js';
+import Calendar from './js/calendar.js';
 var calendar = new Calendar({
 	step: step,
 	leastDays: leastdays,
