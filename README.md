@@ -2,7 +2,7 @@
 
 calendar.js是一款前端日历插件，使用原生JS开发，不依赖任何第三方库，配置简单，还可以在日历上显示价格，适用于旅游、酒店等需要开始时间和结束时间的场景。
 
-![image](https://github.com/zymseo/calendar/blob/master/calendar.png?raw=true)
+![image](https://github.com/zymseo/calendar/blob/master/images/calendar.png)
 
 ### 在线demo
 - [http://www.zymseo.com/demo/calendar](http://www.zymseo.com/demo/calendar)
