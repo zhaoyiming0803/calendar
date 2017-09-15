@@ -250,11 +250,13 @@
 	Calendar.prototype.chooseDate = function () {
 		var	_this = this,
 			activeDate = oDoc.querySelectorAll('.active-date'),
-			activeDateLen = activeDate.length;
+			activeDateLen = activeDate.length,
+			currentActiveDate = null;
 
 		for (var i = 0; i < activeDateLen; i += 1) {
-			activeDate[i].index = i;
-			activeDate[i].onclick = function () {
+			currentActiveDate = activeDate[i];
+			currentActiveDate.index = i;
+			currentActiveDate.onclick = function () {
 				if (_this.timeArry[0] === '') {
 					_this.timeArry[0] = this.getAttribute('date-formate');
 					_this.indexArry[0] = this.index;
@@ -281,7 +283,7 @@
 				this.classList.add('choose-date');
 			};
 
-			activeDate[i] = null;
+			currentActiveDate = null;
 		}
 	};
 
