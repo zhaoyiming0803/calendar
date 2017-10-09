@@ -34,9 +34,9 @@
 	function Calendar (opt) {
 		// 当前年、月、日作为基数
 		var date = new Date();
-		this.currentYear = date.getFullYear();
-		this.currentMonth = date.getMonth();
-		this.currentDate = date.getDate();
+		this.currentYear = parseInt(date.getFullYear(), 10);
+		this.currentMonth = parseInt(date.getMonth(), 10);
+		this.currentDate = parseInt(date.getDate(), 10);
 		
 		// 配置项
 		this.step = opt.step ? Math.abs(opt.step) : 5; // 最多显示从本月开始的step个月
@@ -74,7 +74,7 @@
 			}
 
 			for (var k = 1; k <= monthDays;) {
-				if (currentDate === k && (currentMonth + 1) === startMonth) {
+				if (currentDate === k && (currentMonth + 1) === startMonth && currentYear === _this.currentYear) {
 					str +=		'<li date-formate="'+ currentYear +'/'+ startMonth +'/'+ k +'" class="active-date"><span>今天</span><span class="red">￥'+ _this.priceData[priceIndex] +'</span></li>' +
 								'<li date-formate="'+ currentYear +'/'+ startMonth +'/'+ (k+1) +'" class="active-date"><span>明天</span><span class="red">￥'+ _this.priceData[priceIndex+1] +'</span></li>';
 					k += 2;
@@ -82,7 +82,7 @@
 					continue;
 				}
 
-				if (currentDate > k && (currentMonth + 1) === startMonth) {
+				if (currentDate > k && (currentMonth + 1) === startMonth && currentYear === _this.currentYear) {
 					str +=		'<li date-formate="'+ currentYear +'/'+ startMonth +'/'+ k +'" class="disabled"><span>'+ k +'</span><span class="red"></span></li>';
 				} else {
 					if (_this.priceData[priceIndex]) {
@@ -108,7 +108,8 @@
 
 	// 不显示价格
 	Calendar.prototype.renderNoPriceElement = function (currentYear, currentMonth, currentDate, monthCount, monthDays, startMonth, priceIndex) {
-		var str = '',
+		var _this = this,
+			str = '',
 			startDay = 0;
 
 		for (var i = 0; i < monthCount; i += 1) {
@@ -128,7 +129,7 @@
 			}
 
 			for (var k = 1; k <= monthDays;) {
-				if (currentDate === k && (currentMonth + 1) === startMonth) {
+				if (currentDate === k && (currentMonth + 1) === startMonth && currentYear === _this.currentYear) {
 					str +=		'<li date-formate="'+ currentYear +'/'+ startMonth +'/'+ k +'" class="active-date"><span>今天</span></li>' +
 								'<li date-formate="'+ currentYear +'/'+ startMonth +'/'+ (k+1) +'" class="active-date"><span>明天</span></li>';
 					k += 2;
@@ -136,7 +137,7 @@
 					continue;
 				}
 
-				if (currentDate > k && (currentMonth + 1) === startMonth) {
+				if (currentDate > k && (currentMonth + 1) === startMonth && currentYear === _this.currentYear) {
 					str +=		'<li date-formate="'+ currentYear +'/'+ startMonth +'/'+ k +'" class="disabled"><span>'+ k +'</span></li>';
 				} else {
 					str +=		'<li date-formate="'+ currentYear +'/'+ startMonth +'/'+ k +'" class="active-date"><span>'+ k +'</span></li>';
@@ -295,18 +296,17 @@
 
 	// 日历滚动过程中显示当月
 	Calendar.prototype.calendarScroll = function (calendarWraper) {
-		var timer = null;
+		var timer = null,
+			currentMonthBar = oDoc.querySelector('#current-month-bar'),
+			monthBar = oDoc.querySelectorAll('.month-bar');
 		
 		function getCurrentMonth () {
 			timer && clearTimeout(timer);
 			timer = setTimeout(function(){
-				var currentMonthBar = oDoc.querySelector('#current-month-bar'),
-					calendarWraperScrollTop = this.scrollTop,
-					mark = Math.floor(calendarWraperScrollTop / 260),
-					monthBar = oDoc.querySelectorAll('.month-bar');
-
+				var calendarWraperScrollTop = this.scrollTop,
+					mark = Math.floor(calendarWraperScrollTop / 260);
 				monthBar[mark] && (currentMonthBar.innerText = monthBar[mark].innerText);
-				currentMonthBar = monthBar = timer = null;
+				timer = null;
 			}.bind(this), 100);
 		}
 
