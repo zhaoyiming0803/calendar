@@ -136,11 +136,13 @@ table {
 }
 
 .calendar-top-wraper .week-bar ul {
-	display: flex;
+	display: block;
+	width: 99%;
 }
 
 .calendar-top-wraper .week-bar ul li {
-	flex: 1;
+	display: inline-block;
+	width: 14%;
 	text-align: center;
 	color: #666;
 }
@@ -167,7 +169,7 @@ table {
 
 .calendar-bottom-wraper .month-panel .month-list ul li {
 	float: left;
-	width: 14.286%;
+	width: 14%;
 	height: 40px;
 }
 
