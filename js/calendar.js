@@ -2,7 +2,7 @@
  * Description: 日历控件
  * User: zhaoyiming
  * Date: 2017/9/5
- * License: MIT, https://github.com/zymseo/calendar
+ * License: MIT, https://github.com/zymfe/calendar
  */
 
 ;(function (global, oDoc, factory) {
