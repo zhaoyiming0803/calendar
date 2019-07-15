@@ -2,13 +2,15 @@
 
 calendar.js是一款前端日历插件，使用原生JS开发，不依赖任何第三方库，配置简单，还可以在日历上显示价格，适用于旅游、酒店等需要开始时间和结束时间的场景。
 
-![image](https://github.com/zymseo/calendar/blob/master/images/calendar.png)
+![image](https://github.com/zymseo/calendar/blob/master/src/images/calendar.png)
 
 ### 说明 
 - 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 - 或者您可以 "follow" 一下，我会不断开源更多的有趣的项目
 
 ### 使用方法
+
+参考 /test/index.html
 
 ### 配置
 ``` javascript
@@ -23,14 +25,14 @@ var calendar = new Calendar({
 ### html
 
 ``` html
-<link rel="stylesheet" type="text/css" href="./css/calendar.css" />
-<script type="text/javascript" src="./js/calendar.js"></script>
+<link rel="stylesheet" type="text/css" href="../src/css/calendar.css" />
+<script type="text/javascript" src="../src/js/calendar.js"></script>
 ```
 
 ### （1）使用script 标签引入:
 
 ``` javascript
-<script type="text/javascript" src="./js/calendar.js"></script>
+<script type="text/javascript" src="../src/js/calendar.js"></script>
 <script type="text/javascript">
 	var calendar = new Calendar({
 		step: step,
@@ -53,7 +55,7 @@ require(['Calendar'], function (Calendar) {
 ```
 ### （3）使用ES6方式导入：
 ``` javascript
-import Calendar from './js/calendar.js';
+import Calendar from '../src/js/calendar.js';
 var calendar = new Calendar({
 	step: step,
 	leastDays: leastdays,
