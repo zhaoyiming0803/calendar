@@ -5,7 +5,7 @@ calendar.js是一款前端日历插件，使用原生JS开发，不依赖任何�
 ![image](https://github.com/zymseo/calendar/blob/master/images/calendar.png)
 
 ### 在线demo
-- [http://www.zymseo.com/demo/calendar](http://www.zymseo.com/demo/calendar)
+- [https://zymfe.github.io/calendar/](https://zymfe.github.io/calendar/)
 - 以上demo请在手机端或者PC浏览器的手机模式下浏览
 
 ### 说明 
