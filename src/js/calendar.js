@@ -1,8 +1,6 @@
 /**
- * Description: 日历控件CSS
  * @author: zhaoyiming
  * @since: 2017/9/5
- × License: MIT, https://github.com/zymfe/calendar
  */
 
 ; (function (global, oDoc, factory) {
