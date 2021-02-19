@@ -3,7 +3,7 @@
 calendar.js是一款前端日历插件，使用原生JS开发，不依赖任何第三方库，配置简单，还可以在日历上显示价格，适用于旅游、酒店等需要开始时间和结束时间的场景。
 
 ### 在线demo
-- [https://zymfe.github.io/calendar/](https://zymfe.github.io/calendar/)
+- [https://zhaoyiming0803.github.io/calendar/](https://zhaoyiming0803.github.io/calendar/)
 - 以上demo请在手机端或者PC浏览器的手机模式下浏览
 
 ### 说明 
@@ -66,5 +66,4 @@ var calendar = new Calendar({
 }).init();
 ```
 ### 基于 MIT license 开源
-- 博客：[@赵一鸣](http://www.zymseo.com)
-- QQ：1047832475
+- QQ&微信：1047832475
